@@ -1,0 +1,40 @@
+baseURL = "https://fit.lemric.com/"
+title = "LemricFit"
+languageCode = "en"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "term", "RSS"]
+uglyURLs = false
+
+[params]
+  appName = "LemricFit"
+  contactEmail = "biuro@lemric.com"
+  tagline = "Local-first fitness tracking for running, cycling, walking, and hiking."
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    weight = 1
+    title = "LemricFit"
+    [languages.en.params]
+      tagline = "Local-first fitness tracking for running, cycling, walking, and hiking."
+      navSupport = "Support"
+      navPrivacy = "Privacy"
+      ctaContact = "Email support"
+      footerNote = "LemricFit by Lemric. Local-first. No required cloud account."
+  [languages.pl]
+    languageName = "Polski"
+    weight = 2
+    title = "LemricFit"
+    [languages.pl.params]
+      tagline = "Lokalna aplikacja fitness do biegania, kolarstwa, spacerów i trekkingu."
+      navSupport = "Wsparcie"
+      navPrivacy = "Prywatność"
+      ctaContact = "Napisz do nas"
+      footerNote = "LemricFit by Lemric. Local-first. Bez obowiązkowego konta w chmurze."
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

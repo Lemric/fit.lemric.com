@@ -1,0 +1,27 @@
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href="{{ "/" | relLangURL }}">{{ .Site.Title }}</a>
+    <nav class="nav" aria-label="Primary">
+      <a
+        href="{{ "support/" | relLangURL }}"
+        {{ if eq .Section "support" }}aria-current="page"{{ end }}
+        >{{ .Site.Params.navSupport }}</a
+      >
+      <a
+        href="{{ "privacy/" | relLangURL }}"
+        {{ if eq .Section "privacy" }}aria-current="page"{{ end }}
+        >{{ .Site.Params.navPrivacy }}</a
+      >
+      <span class="lang-switch" aria-label="Language">
+        {{ range .AllTranslations }}
+          <a
+            href="{{ .RelPermalink }}"
+            hreflang="{{ .Language.Lang }}"
+            {{ if eq .Language.Lang $.Language.Lang }}aria-current="true"{{ end }}
+            >{{ .Language.Lang | upper }}</a
+          >
+        {{ end }}
+      </span>
+    </nav>
+  </div>
+</header>

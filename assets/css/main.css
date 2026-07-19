@@ -1,0 +1,256 @@
+:root {
+  --trust-blue: #1d3ab5;
+  --trust-blue-dim: #16308f;
+  --sky-aqua: #44d1ff;
+  --bright-sun: #ff8300;
+  --night-navy: #001f3a;
+  --flero-white: #ffffff;
+  --flero-cloud: #f5f6fa;
+  --border: #e5e7eb;
+  --text-muted: rgba(0, 31, 58, 0.55);
+  --text-secondary: rgba(0, 31, 58, 0.85);
+  --max: 42rem;
+  --radius: 10px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--night-navy);
+  background: var(--flero-white);
+}
+
+a {
+  color: var(--trust-blue);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.15em;
+}
+
+a:hover {
+  color: var(--trust-blue-dim);
+}
+
+.site-header {
+  border-bottom: 1px solid var(--border);
+  background: var(--flero-white);
+}
+
+.site-header__inner,
+.site-footer__inner,
+.wrap {
+  width: min(100% - 2rem, 52rem);
+  margin-inline: auto;
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.brand {
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: -0.03em;
+  color: var(--trust-blue);
+  text-decoration: none;
+}
+
+.brand:hover {
+  color: var(--trust-blue-dim);
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.85rem 1.1rem;
+}
+
+.nav a {
+  color: var(--night-navy);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.nav a:hover,
+.nav a[aria-current="page"] {
+  color: var(--trust-blue);
+}
+
+.lang-switch {
+  display: inline-flex;
+  gap: 0.35rem;
+  margin-left: 0.25rem;
+  padding-left: 0.75rem;
+  border-left: 1px solid var(--border);
+  font-size: 0.85rem;
+}
+
+.lang-switch a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.lang-switch a[aria-current="true"] {
+  color: var(--trust-blue);
+}
+
+main {
+  flex: 1;
+  padding: 2.5rem 0 3.5rem;
+}
+
+.hero {
+  max-width: var(--max);
+  margin-bottom: 2.5rem;
+}
+
+.hero h1 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  color: var(--trust-blue);
+}
+
+.hero p {
+  margin: 0 0 1.5rem;
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  max-width: 36rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.7rem 1.15rem;
+  border-radius: var(--radius);
+  font-weight: 700;
+  font-size: 0.98rem;
+  text-decoration: none;
+  border: 1.5px solid transparent;
+}
+
+.btn--cta {
+  background: var(--bright-sun);
+  color: var(--flero-white);
+}
+
+.btn--cta:hover {
+  background: #e67600;
+  color: var(--flero-white);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--trust-blue);
+  border-color: var(--border);
+}
+
+.btn--ghost:hover {
+  border-color: var(--trust-blue);
+  color: var(--trust-blue-dim);
+}
+
+.content {
+  max-width: var(--max);
+}
+
+.content h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  letter-spacing: -0.03em;
+  color: var(--night-navy);
+}
+
+.content h2 {
+  margin: 2rem 0 0.75rem;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+  color: var(--night-navy);
+}
+
+.content h3 {
+  margin: 1.5rem 0 0.5rem;
+  font-size: 1.05rem;
+}
+
+.content p,
+.content li {
+  color: var(--text-secondary);
+}
+
+.content ul {
+  padding-left: 1.25rem;
+}
+
+.content li + li {
+  margin-top: 0.35rem;
+}
+
+.lead {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+.panel {
+  margin: 1.5rem 0;
+  padding: 1.15rem 1.25rem;
+  background: var(--flero-cloud);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.panel strong {
+  color: var(--night-navy);
+}
+
+.email {
+  font-weight: 700;
+  font-size: 1.15rem;
+  word-break: break-all;
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  background: var(--flero-cloud);
+  padding: 1.5rem 0;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+.site-footer a {
+  color: var(--trust-blue);
+}
+
+.accent {
+  color: var(--sky-aqua);
+}

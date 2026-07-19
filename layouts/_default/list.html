@@ -1,0 +1,21 @@
+{{ define "main" }}
+  {{ if .IsHome }}
+    <section class="hero">
+      <h1>{{ .Site.Title }}</h1>
+      <p>{{ .Site.Params.tagline }}</p>
+      <div class="actions">
+        <a class="btn btn--cta" href="mailto:{{ .Site.Params.contactEmail }}">{{ .Site.Params.ctaContact }}</a>
+        <a class="btn btn--ghost" href="{{ "support/" | relLangURL }}">{{ .Site.Params.navSupport }}</a>
+        <a class="btn btn--ghost" href="{{ "privacy/" | relLangURL }}">{{ .Site.Params.navPrivacy }}</a>
+      </div>
+    </section>
+    <div class="content">
+      {{ .Content }}
+    </div>
+  {{ else }}
+    <article class="content">
+      <h1>{{ .Title }}</h1>
+      {{ .Content }}
+    </article>
+  {{ end }}
+{{ end }}
