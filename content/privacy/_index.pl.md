@@ -1,6 +1,5 @@
 ---
-title: "Polityka prywatności"
-description: "Jak LemricFit przetwarza dane. Większość danych treningowych zostaje na telefonie."
+title: "Polityka prywatności aplikacji LemricFit"
 layout: single
 ---
 

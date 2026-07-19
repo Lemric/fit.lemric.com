@@ -7,6 +7,13 @@ Strona LemricFit: pomoc i polityka prywatności (App Store / Google Play).
 - Prywatność: https://fit.lemric.com/privacy/ · https://fit.lemric.com/pl/privacy/
 - Kontakt: biuro@lemric.com
 
+Oficjalny tekst PL polityki prywatności jest ten sam co w aplikacji
+(`LemricFit/assets/legal/privacy_policy_pl.md`). Po zmianie w aplikacji:
+
+```bash
+./scripts/sync-privacy.sh
+```
+
 ## Lokalnie
 
 Potrzebujesz [Hugo Extended](https://gohugo.io/installation/).
