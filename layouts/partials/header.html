@@ -1,6 +1,15 @@
 <header class="site-header">
   <div class="site-header__inner">
-    <a class="brand" href="{{ "/" | relLangURL }}">{{ .Site.Title }}</a>
+    <a class="brand" href="{{ "/" | relLangURL }}">
+      <img
+        class="brand__logo"
+        src="/images/lemric-fit.png"
+        width="36"
+        height="36"
+        alt=""
+      />
+      <span class="brand__name">{{ .Site.Title }}</span>
+    </a>
     <nav class="nav" aria-label="Primary">
       <a
         href="{{ "support/" | relLangURL }}"

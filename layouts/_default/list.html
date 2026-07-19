@@ -1,12 +1,33 @@
 {{ define "main" }}
   {{ if .IsHome }}
     <div class="home wrap">
-      <h1 class="home__brand">{{ .Site.Title }}</h1>
-      <p class="home__tag">{{ .Site.Params.tagline }}</p>
-      <p class="home__lead">{{ .Site.Params.heroLead }}</p>
-      <div class="home__cta">
-        <a class="primary" href="mailto:{{ .Site.Params.contactEmail }}">{{ .Site.Params.ctaContact }}</a>
-        <a class="secondary" href="{{ "support/" | relLangURL }}">{{ .Site.Params.ctaSupport }}</a>
+      <div class="home__top">
+        <div class="home__copy">
+          <div class="home__identity">
+            <img
+              class="home__logo"
+              src="/images/lemric-fit.png"
+              width="72"
+              height="72"
+              alt="LemricFit"
+            />
+            <h1 class="home__brand">{{ .Site.Title }}</h1>
+          </div>
+          <p class="home__tag">{{ .Site.Params.tagline }}</p>
+          <p class="home__lead">{{ .Site.Params.heroLead }}</p>
+          <div class="home__cta">
+            <a class="primary" href="mailto:{{ .Site.Params.contactEmail }}">{{ .Site.Params.ctaContact }}</a>
+            <a class="secondary" href="{{ "support/" | relLangURL }}">{{ .Site.Params.ctaSupport }}</a>
+          </div>
+        </div>
+        <figure class="home__visual">
+          <img
+            src="/images/share-card.png"
+            width="540"
+            height="960"
+            alt="{{ if eq .Site.Language.Lang "pl" }}Przykładowe podsumowanie aktywności w LemricFit{{ else }}Sample LemricFit activity summary{{ end }}"
+          />
+        </figure>
       </div>
 
       <ul class="home__list">
