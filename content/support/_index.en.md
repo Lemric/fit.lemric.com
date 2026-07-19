@@ -1,39 +1,39 @@
 ---
-title: "Support"
-description: "Contact and answers for LemricFit."
+title: "Help"
+description: "How to get help with LemricFit."
 layout: single
 ---
 
 <div class="contact">
   <a class="mail" href="mailto:biuro@lemric.com">biuro@lemric.com</a>
-  <p class="hint">Include device model, OS version, and a short description of the issue.</p>
+  <p class="hint">Please include your phone model, iOS or Android version, and what went wrong. A screenshot helps when the problem is on screen.</p>
 </div>
 
-## About
+## What LemricFit is
 
-LemricFit records GPS activities on your device. Optional Bluetooth sensors and Health integrations are available. No required cloud account.
+LemricFit is a local fitness app for running, cycling, walking, and hiking. It records GPS tracks and — when available — heart rate, cadence, and power, then turns each workout into a clear summary. You do not need a LemricFit account. There is no social feed and no mandatory upload.
 
-## Questions
+## Common topics
 
 <ul class="faq">
   <li>
-    <h3>Location / GPS</h3>
-    <p>Used to record your route during an activity. Change this in system Settings. Without location, there is no GPS path.</p>
+    <h3>Location</h3>
+    <p>The app needs location access to draw your route while you record. You can change the permission in system Settings. If location is denied, distance and other stats may still appear, but there will be no GPS path on the map.</p>
   </li>
   <li>
     <h3>Bluetooth sensors</h3>
-    <p>Pair heart-rate, cadence, and power sensors from the Sensors screen. Keep the sensor on and nearby.</p>
+    <p>Open Sensors in the app, start a scan, and select your heart-rate, cadence, or power meter. The sensor should be awake and close to the phone. On iOS, Bluetooth permission appears the first time you scan.</p>
   </li>
   <li>
-    <h3>Backups</h3>
-    <p>Local encrypted backups are in the app. Optional cloud backup never includes your encryption key. Keep your recovery key if you use encryption features.</p>
+    <h3>Backups and encryption</h3>
+    <p>You can make encrypted backups on the device. Optional iCloud or Google Drive backup stores the sealed file without your encryption key. If you use a recovery key, keep it somewhere safe — it is the only way to restore after a full wipe or new phone when the key is gone from the device.</p>
   </li>
   <li>
-    <h3>Account</h3>
-    <p>No LemricFit account is required. Data stays on the device unless you enable optional backup or Health sync.</p>
+    <h3>Accounts</h3>
+    <p>LemricFit does not create an account for you. Optional Google Drive backup on Android uses your Google account only for that backup. Health data stays in Apple Health or Health Connect under your control.</p>
   </li>
 </ul>
 
 ## Privacy
 
-[Privacy Policy]({{< ref "/privacy" >}})
+Details are in the [Privacy Policy]({{< ref "/privacy" >}}).

@@ -1,4 +1,4 @@
 ---
 title: "LemricFit"
-description: "Local-first fitness tracking for running, cycling, walking, and hiking."
+description: "Personal training, recorded on your phone. Running, cycling, walking, and hiking — data stays on your device."
 ---

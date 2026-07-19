@@ -1,4 +1,4 @@
 ---
 title: "LemricFit"
-description: "Lokalna aplikacja fitness do biegania, kolarstwa, spacerów i trekkingu."
+description: "Trening osobisty, zapisany na Twoim telefonie. Bieganie, rower, spacer i trekking — dane zostają na urządzeniu."
 ---

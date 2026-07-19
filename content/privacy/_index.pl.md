@@ -1,6 +1,6 @@
 ---
 title: "Polityka prywatności"
-description: "Jak LemricFit przetwarza dane (model local-first)."
+description: "Jak LemricFit przetwarza dane. Większość danych treningowych zostaje na telefonie."
 layout: single
 ---
 
