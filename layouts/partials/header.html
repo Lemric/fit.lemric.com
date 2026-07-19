@@ -1,9 +1,6 @@
 <header class="site-header">
   <div class="site-header__inner">
-    <a class="brand" href="{{ "/" | relLangURL }}">
-      <span class="brand__mark" aria-hidden="true"></span>
-      {{ .Site.Title }}
-    </a>
+    <a class="brand" href="{{ "/" | relLangURL }}">{{ .Site.Title }}</a>
     <nav class="nav" aria-label="Primary">
       <a
         href="{{ "support/" | relLangURL }}"
@@ -25,7 +22,6 @@
           >
         {{ end }}
       </span>
-      <a class="nav__cta" href="mailto:{{ .Site.Params.contactEmail }}">{{ .Site.Params.ctaContact }}</a>
     </nav>
   </div>
 </header>

@@ -1,13 +1,9 @@
 {{ define "main" }}
-  <header class="page-hero">
-    <div class="wrap wrap--narrow">
-      <h1>{{ .Title }}</h1>
-      {{ with .Description }}<p>{{ . }}</p>{{ end }}
-    </div>
-  </header>
-  <div class="page-body">
-    <div class="wrap wrap--narrow content">
+  <article class="page wrap--text">
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="deck">{{ . }}</p>{{ end }}
+    <div class="content">
       {{ .Content }}
     </div>
-  </div>
+  </article>
 {{ end }}
