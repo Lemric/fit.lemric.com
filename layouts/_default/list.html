@@ -1,21 +1,105 @@
 {{ define "main" }}
   {{ if .IsHome }}
     <section class="hero">
-      <h1>{{ .Site.Title }}</h1>
-      <p>{{ .Site.Params.tagline }}</p>
-      <div class="actions">
-        <a class="btn btn--cta" href="mailto:{{ .Site.Params.contactEmail }}">{{ .Site.Params.ctaContact }}</a>
-        <a class="btn btn--ghost" href="{{ "support/" | relLangURL }}">{{ .Site.Params.navSupport }}</a>
-        <a class="btn btn--ghost" href="{{ "privacy/" | relLangURL }}">{{ .Site.Params.navPrivacy }}</a>
+      <div class="hero__inner">
+        <div>
+          <p class="hero__eyebrow">{{ if eq .Site.Language.Lang "pl" }}Fitness local-first{{ else }}Local-first fitness{{ end }}</p>
+          <h1>{{ .Site.Title }}</h1>
+          <p class="hero__tagline">{{ .Site.Params.tagline }}</p>
+          <p class="hero__lead">{{ .Site.Params.heroLead }}</p>
+          <div class="actions">
+            <a class="btn btn--cta" href="mailto:{{ .Site.Params.contactEmail }}">{{ .Site.Params.ctaContact }}</a>
+            <a class="btn btn--light" href="{{ "support/" | relLangURL }}">{{ .Site.Params.ctaSupport }}</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <svg class="hero-visual__map" viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <linearGradient id="route" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#44D1FF"/>
+                <stop offset="55%" stop-color="#1D3AB5"/>
+                <stop offset="100%" stop-color="#FF8300"/>
+              </linearGradient>
+            </defs>
+            <rect width="480" height="320" fill="#001428"/>
+            <g opacity="0.18" stroke="#44D1FF" stroke-width="1">
+              <path d="M0 40h480M0 80h480M0 120h480M0 160h480M0 200h480M0 240h480M0 280h480"/>
+              <path d="M40 0v320M80 0v320M120 0v320M160 0v320M200 0v320M240 0v320M280 0v320M320 0v320M360 0v320M400 0v320M440 0v320"/>
+            </g>
+            <path d="M48 240 C90 220, 110 160, 150 150 C200 136, 220 210, 270 190 C320 168, 340 90, 390 78 C420 70, 440 100, 455 88" fill="none" stroke="url(#route)" stroke-width="5" stroke-linecap="round"/>
+            <circle cx="48" cy="240" r="7" fill="#44D1FF"/>
+            <circle cx="455" cy="88" r="8" fill="#FF8300"/>
+          </svg>
+          <div class="hero-visual__stats">
+            {{ if eq .Site.Language.Lang "pl" }}
+            <div class="stat"><span class="stat__label">Dystans</span><span class="stat__value">12.<span>4</span> km</span></div>
+            <div class="stat"><span class="stat__label">Tempo</span><span class="stat__value">5:<span>12</span></span></div>
+            <div class="stat"><span class="stat__label">Wznios</span><span class="stat__value">+<span>186</span> m</span></div>
+            {{ else }}
+            <div class="stat"><span class="stat__label">Distance</span><span class="stat__value">12.<span>4</span> km</span></div>
+            <div class="stat"><span class="stat__label">Pace</span><span class="stat__value">5:<span>12</span></span></div>
+            <div class="stat"><span class="stat__label">Elev</span><span class="stat__value">+<span>186</span> m</span></div>
+            {{ end }}
+          </div>
+        </div>
       </div>
     </section>
-    <div class="content">
-      {{ .Content }}
-    </div>
+
+    <section class="section section--cloud">
+      <div class="wrap">
+        <div class="section__head">
+          <h2>{{ if eq .Site.Language.Lang "pl" }}Stworzone do prawdziwych treningów{{ else }}Built for real training{{ end }}</h2>
+          <p>{{ if eq .Site.Language.Lang "pl" }}Te same fundamenty, których oczekujesz od aplikacji fitness premium — z naciskiem na prywatność i jakość GPS.{{ else }}The foundations you expect from a premium fitness app — with privacy and GPS quality first.{{ end }}</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 4 6 4 11c0 5 8 11 8 11s8-6 8-11c0-5-4-9-8-9z"/><circle cx="12" cy="11" r="2.5"/></svg>
+            </div>
+            <h3>{{ .Site.Params.feature1Title }}</h3>
+            <p>{{ .Site.Params.feature1Body }}</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3.5 12h3l2-6 3 12 2-6h7"/><path d="M20 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
+            </div>
+            <h3>{{ .Site.Params.feature2Title }}</h3>
+            <p>{{ .Site.Params.feature2Body }}</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+            </div>
+            <h3>{{ .Site.Params.feature3Title }}</h3>
+            <p>{{ .Site.Params.feature3Body }}</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="cta-band__inner">
+        <div>
+          <h2>{{ .Site.Params.bandTitle }}</h2>
+          <p>{{ .Site.Params.bandBody }}</p>
+        </div>
+        <div class="actions">
+          <a class="btn btn--cta" href="mailto:{{ .Site.Params.contactEmail }}">{{ .Site.Params.ctaContact }}</a>
+          <a class="btn btn--light" href="{{ "privacy/" | relLangURL }}">{{ .Site.Params.ctaPrivacy }}</a>
+        </div>
+      </div>
+    </section>
   {{ else }}
-    <article class="content">
-      <h1>{{ .Title }}</h1>
-      {{ .Content }}
-    </article>
+    <header class="page-hero">
+      <div class="wrap wrap--narrow">
+        <h1>{{ .Title }}</h1>
+        {{ with .Description }}<p>{{ . }}</p>{{ end }}
+      </div>
+    </header>
+    <div class="page-body">
+      <div class="wrap wrap--narrow content">
+        {{ .Content }}
+      </div>
+    </div>
   {{ end }}
 {{ end }}

@@ -4,11 +4,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>
-      {{- if .IsHome -}}{{ .Site.Title }}{{- else -}}{{ .Title }} · {{ .Site.Title }}{{- end -}}
+      {{- if .IsHome -}}{{ .Site.Title }} — {{ .Site.Params.tagline }}{{- else -}}{{ .Title }} · {{ .Site.Title }}{{- end -}}
     </title>
     <meta
       name="description"
-      content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.tagline }}{{ end }}"
+      content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.heroLead }}{{ end }}"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@450;550;650;750;800&family=Sora:wght@600;700&display=swap"
+      rel="stylesheet"
     />
     {{ $css := resources.Get "css/main.css" | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $css.RelPermalink }}" />
@@ -17,9 +23,7 @@
   <body>
     {{ partial "header.html" . }}
     <main>
-      <div class="wrap">
-        {{ block "main" . }}{{ end }}
-      </div>
+      {{ block "main" . }}{{ end }}
     </main>
     {{ partial "footer.html" . }}
   </body>

@@ -10,7 +10,6 @@ uglyURLs = false
 [params]
   appName = "LemricFit"
   contactEmail = "biuro@lemric.com"
-  tagline = "Local-first fitness tracking for running, cycling, walking, and hiking."
 
 [languages]
   [languages.en]
@@ -18,21 +17,45 @@ uglyURLs = false
     weight = 1
     title = "LemricFit"
     [languages.en.params]
-      tagline = "Local-first fitness tracking for running, cycling, walking, and hiking."
+      tagline = "Train with precision. Keep your data on your device."
+      heroLead = "GPS tracking for running, cycling, walking, and hiking — with optional sensors, segments, and training load. Local-first. No required cloud account."
       navSupport = "Support"
       navPrivacy = "Privacy"
-      ctaContact = "Email support"
-      footerNote = "LemricFit by Lemric. Local-first. No required cloud account."
+      ctaContact = "Contact support"
+      ctaSupport = "Get help"
+      ctaPrivacy = "Privacy policy"
+      footerNote = "LemricFit by Lemric"
+      footerTag = "Local-first fitness. Your workouts stay on your device."
+      feature1Title = "GPS you can trust"
+      feature1Body = "Filtered tracks, elevation, splits, and maps built for real outdoor sessions."
+      feature2Title = "Sensors & Health"
+      feature2Body = "Bluetooth heart rate, cadence, and power — plus Apple Health and Health Connect."
+      feature3Title = "Private by design"
+      feature3Body = "Encrypted local database. Optional backups without exposing your encryption key."
+      bandTitle = "Need help with LemricFit?"
+      bandBody = "Hardware pairing, permissions, backups, and more — we reply to every message."
   [languages.pl]
     languageName = "Polski"
     weight = 2
     title = "LemricFit"
     [languages.pl.params]
-      tagline = "Lokalna aplikacja fitness do biegania, kolarstwa, spacerów i trekkingu."
+      tagline = "Trenuj precyzyjnie. Dane zostają na Twoim urządzeniu."
+      heroLead = "Śledzenie GPS do biegania, kolarstwa, spacerów i trekkingu — z opcjonalnymi sensorami, segmentami i obciążeniem treningowym. Local-first. Bez obowiązkowego konta w chmurze."
       navSupport = "Wsparcie"
       navPrivacy = "Prywatność"
       ctaContact = "Napisz do nas"
-      footerNote = "LemricFit by Lemric. Local-first. Bez obowiązkowego konta w chmurze."
+      ctaSupport = "Pomoc"
+      ctaPrivacy = "Polityka prywatności"
+      footerNote = "LemricFit by Lemric"
+      footerTag = "Fitness local-first. Treningi zostają na Twoim urządzeniu."
+      feature1Title = "GPS, któremu ufasz"
+      feature1Body = "Filtrowane trasy, przewyższenie, odcinki i mapy pod prawdziwe aktywności outdoor."
+      feature2Title = "Sensory i Health"
+      feature2Body = "Bluetooth: tętno, kadencja i moc — plus Apple Health oraz Health Connect."
+      feature3Title = "Prywatność z założenia"
+      feature3Body = "Zaszyfrowana baza lokalna. Opcjonalne kopie bez ujawniania klucza szyfrującego."
+      bandTitle = "Potrzebujesz pomocy z LemricFit?"
+      bandBody = "Parowanie sprzętu, uprawnienia, kopie zapasowe i więcej — odpowiadamy na każdą wiadomość."
 
 [markup]
   [markup.goldmark]

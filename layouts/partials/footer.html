@@ -1,8 +1,19 @@
 <footer class="site-footer">
   <div class="site-footer__inner">
+    <div>
+      <p class="site-footer__brand">{{ .Site.Title }}</p>
+      <p>{{ .Site.Params.footerTag }}</p>
+      <p>
+        <a href="mailto:{{ .Site.Params.contactEmail }}">{{ .Site.Params.contactEmail }}</a>
+      </p>
+    </div>
+    <div class="site-footer__links">
+      <a href="{{ "support/" | relLangURL }}">{{ .Site.Params.navSupport }}</a>
+      <a href="{{ "privacy/" | relLangURL }}">{{ .Site.Params.navPrivacy }}</a>
+      <a href="mailto:{{ .Site.Params.contactEmail }}">{{ .Site.Params.ctaContact }}</a>
+    </div>
+  </div>
+  <div class="site-footer__inner site-footer__meta">
     <p>{{ .Site.Params.footerNote }}</p>
-    <p>
-      <a href="mailto:{{ .Site.Params.contactEmail }}">{{ .Site.Params.contactEmail }}</a>
-    </p>
   </div>
 </footer>
